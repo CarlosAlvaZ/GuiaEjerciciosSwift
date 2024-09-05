@@ -6,7 +6,7 @@ func isPrime(_ n: Int) -> Bool {
 
     var i = 5
     while i * i <= n {
-        if n % 1 == 0 || n % (i + 2) == 0 {return false}
+        if n % i == 0 || n % (i + 2) == 0 {return false}
         i += 6
     }
     return true
@@ -17,8 +17,7 @@ func sum(_ n: Int) -> Int {
     var count = 0
     var num = 2
 
-    while count < 10{
-        print(count, num)
+    while count < n{
         if isPrime(num) {
             sum += num
             count+=1
